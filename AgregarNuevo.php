@@ -75,10 +75,11 @@
 		
 		// if no error occured, continue ....
 		if(!isset($errMSG)){
-			$stmt = $DB_con->prepare('INSERT INTO tbl_imagenes(Imagen_Marca,Imagen_Tipo,Imagen_Img,Imagen_Img2) VALUES(:uname, :ujob, :upic, :upic)');
+			$stmt = $DB_con->prepare('INSERT INTO tbl_imagenes(Imagen_Marca,Imagen_Tipo,Imagen_Img,Imagen_Img2) VALUES(:uname, :ujob, :upic, :upic2)');
 			$stmt->bindParam(':uname',$username);
 			$stmt->bindParam(':ujob',$userjob);
 			$stmt->bindParam(':upic',$userpic);
+			$stmt->bindParam(':upic2',$userpic2);
 
 			
 			if($stmt->execute())
