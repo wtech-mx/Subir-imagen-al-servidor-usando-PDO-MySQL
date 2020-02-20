@@ -47,7 +47,7 @@
 			// allow valid image file formats
 			if(in_array($imgExt, $valid_extensions)){			
 				// Check file size '1MB'
-				if($imgSize < 1000000)				{
+				if($imgSize < 1000000){
 					move_uploaded_file($tmp_dir,$upload_dir.$userpic);
 				}
 				else{
